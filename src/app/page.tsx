@@ -128,9 +128,9 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
               {/* Situação Atual */}
               <div className="bg-[#f6f6f6] border border-red-700 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-red-700 mb-4 flex items-center">
+                <p className="text-xl font-bold text-red-700 mb-4 flex items-center">
                   📋 Situação Atual
-                </h3>
+                </p>
                 <div className="space-y-3">
                   <p className="text-red-700"><strong>Seguradora:</strong> {companyData.sections.saude.atual.seguradoras}</p>
                   <p className="text-red-700"><strong>Apólice:</strong></p>
@@ -222,9 +222,9 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
               {/* Situação Atual */}
               <div className="bg-[#f6f6f6] border border-red-700 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-red-700 mb-4 flex items-center">
+                <p className="text-xl font-bold text-red-700 mb-4 flex items-center">
                   📋 Situação Atual
-                </h3>
+                </p>
                 <div className="space-y-3">
                   <p className="flex items-center text-red-700"><span className="text-2xl mr-2">👥</span> {companyData.sections.vida.atual.colaboradores} Colaboradores</p>
                   <p className="text-2xl font-bold text-red-700">{formatCurrency(companyData.sections.vida.atual.valorMensal)}</p>
@@ -319,9 +319,9 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Situação Atual */}
               <div className="bg-[#f6f6f6] border border-red-700 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-red-700 mb-4 flex items-center">
+                <p className="text-xl font-bold text-red-700 mb-4 flex items-center">
                   🏢 Situação Atual
-                </h3>
+                </p>
                 <div className="space-y-3">
                   <p className="text-red-700"><strong>Seguradora:</strong> {companyData.sections.empresarial.atual.seguradora}</p>
                   <p className="text-red-700"><strong>Apólice:</strong></p>
@@ -372,9 +372,9 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
               {/* Situação Atual */}
               <div className="bg-[#f6f6f6] border border-red-700 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-red-700 mb-4 flex items-center">
+                <p className="text-xl font-bold text-red-700 mb-4 flex items-center">
                   🚗 Situação Atual
-                </h3>
+                </p>
                 <div className="space-y-3">
                   <p className="text-red-700">Veículos: {companyData.sections.frota.atual.veiculos}</p>
                   <p className="text-red-700"><strong>Seguradora:</strong> {companyData.sections.frota.atual.seguradora}</p>
@@ -663,22 +663,24 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#011147] text-[#f6f6f6] py-8 mt-16">
+      <footer className="bg-[#021d79] text-[#f6f6f6] py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center space-x-8 mb-4">
             <Image 
               src="/logos/ultramega.png" 
               alt="Logo Ultramega" 
-              width={32}
-              height={32}
+              width={128}
+              height={128}
               className="opacity-80"
+              style={{ borderRadius: "5%" }}
             />
             <Image 
               src="/logos/belz.png" 
               alt="Logo Belz" 
-              width={32}
-              height={32}
+              width={128}
+              height={128}
               className="opacity-80"
+              style={{ borderRadius: "5%" }}
             />
           </div>
           <p className="text-white font-medium">
