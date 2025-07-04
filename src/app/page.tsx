@@ -153,7 +153,7 @@ export default function Home() {
 
               {/* Proposta Belz */}
               <div className="bg-[#021d79] rounded-xl p-6">
-                <h3 className="text-xl font-bold titulo-branco" id="proposta-belz-1" style={{ color: 'white !important' }} mb-4 flex items-center>
+                <h3 id="proposta-belz-1" className="text-xl font-bold titulo-branco mb-4 flex items-center" style={{ color: 'white !important' }}>
                   <span style={{ color: 'white !important' }}>📋 Proposta Belz</span>
                 </h3>
                 <div className="space-y-3">
@@ -247,7 +247,7 @@ export default function Home() {
 
               {/* Proposta Belz */}
               <div className="bg-[#021d79] rounded-xl p-6">
-                <h3 className="text-xl font-bold titulo-branco" id="proposta-belz-2" style={{ color: 'white !important' }} mb-4 flex items-center>
+                <h3 id="proposta-belz-2" className="text-xl font-bold titulo-branco mb-4 flex items-center" style={{ color: 'white !important' }}>
                   <span style={{ color: 'white !important' }}>📋 Proposta Belz</span>
                 </h3>
                 <div className="space-y-3">
@@ -344,7 +344,7 @@ export default function Home() {
 
               {/* Proposta Belz */}
               <div className="bg-[#021d79] rounded-xl p-6">
-                <h3 className="text-xl font-bold titulo-branco" id="proposta-belz-3" style={{ color: 'white !important' }} mb-4 flex items-center>
+                <h3 id="proposta-belz-3" className="text-xl font-bold titulo-branco mb-4 flex items-center" style={{ color: 'white !important' }}>
                   <span style={{ color: 'white !important' }}>🏢 Proposta Belz</span>
                 </h3>
                 <div className="space-y-3">
