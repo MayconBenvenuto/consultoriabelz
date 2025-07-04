@@ -18,7 +18,7 @@ const PDFSection: React.FC = () => (
   <section>
     <div className="mb-6">
       <h2 className="text-2xl font-bold text-gray-800 mb-2">Documentos e Propostas</h2>
-      <p className="text-gray-600">Acesse todos os documentos relacionados às propostas atuais e da Belz</p>
+      <p className="text-gray-900">Acesse todos os documentos relacionados às propostas atuais e da Belz</p>
     </div>
     
     {/* Separando por categoria */}

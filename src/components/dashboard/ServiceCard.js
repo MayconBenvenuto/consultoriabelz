@@ -12,7 +12,7 @@ const ServiceCard = ({
   return (
     <Card variant={variant}>
       <h4 className={`text-lg font-medium mb-3 ${
-        variant === 'savings' || variant === 'total' || variant === 'stats' ? 'text-white' : 'text-gray-700'
+        variant === 'savings' || variant === 'total' || variant === 'stats' ? 'text-white' : 'text-gray-900'
       }`}>
         {title}
       </h4>
@@ -25,7 +25,7 @@ const ServiceCard = ({
       
       {detail && (
         <div className={`text-sm mb-2 ${
-          variant === 'savings' || variant === 'total' || variant === 'stats' ? 'text-white opacity-90' : 'text-gray-600'
+          variant === 'savings' || variant === 'total' || variant === 'stats' ? 'text-white opacity-90' : 'text-gray-800'
         }`}>
           {typeof detail === 'number' ? formatCurrency(detail) : detail}
         </div>

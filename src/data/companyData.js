@@ -6,31 +6,105 @@ export const companyData = {
     consultant: "Belz Corretora de Seguros"
   },
 
-  // Conteúdo de Texto do Site (Labels e Títulos)
-  labels: {
-    header: {
-      title: "ULTRAMEGA - BELZ SEGUROS",
-      subtitle: "Análise detalhada das propostas da Belz Corretora de Seguros"
-    },
-    sections: {
-      currentCosts: "Custos Atuais Mensais",
-      belzProposal: "Belz Conecta Saúde + Proposta Belz",
-      comparison: "📊 Comparativo de Valores Anual",
-      savings: {
-        title: "Economia Total Estimada",
-        monthly: "por MÊS:",
-        annual: "por ANO:",
-        description: "Valor economizado anualmente com as propostas da Belz Corretora"
+  // Dados específicos de cada seção
+  sections: {
+    saude: {
+      atual: {
+        seguradoras: "SulAmérica/Hapvida",
+        valorMensal: 61280.09,
+        valorAnual: 61280.09 * 12,
+        documentos: [
+          { nome: "SulAmérica Atual", arquivo: "/arquivos/sulamerica-atual.pdf" },
+          { nome: "Hapvida Atual", arquivo: "/arquivos/hapvida-atual.pdf" }
+        ]
+      },
+      proposta: {
+        seguradoras: "Bradesco/Unimed",
+        valorMensal: 47454.61,
+        valorAnual: 47454.61 * 12,
+        documentos: [
+          { nome: "Proposta Bradesco (Belz)", arquivo: "/arquivos/segurosaude-bradesco-belz.pdf" },
+          { nome: "Proposta Unimed (Belz)", arquivo: "/arquivos/segurosaude-unimed-belz.pdf" }
+        ]
       }
     },
-    costItems: [
-      "Ouvidoria",
-      "Ginástica Laboral", 
-      "Saúde Atual",
-      "Frota Atual",
-      "Vida",
-      "Seguro Empresarial"
-    ]
+    
+    vida: {
+      atual: {
+        colaboradores: 33,
+        valorMensal: 55.67,
+        valorAnual: 668.00,
+        valorPorColaborador: 20.24,
+        seguradora: "Alfa",
+        documentos: [
+          { nome: "Seguro Atual (Alfa)", arquivo: "/arquivos/segurodevida-alfa-atual.pdf" }
+        ]
+      },
+      proposta: {
+        colaboradores: 70,
+        valorMensal: 146.95,
+        valorAnual: 1763.37,
+        valorPorColaborador: 25.19,
+        seguradora: "SulAmérica",
+        observacao: "INCLUSÃO DE TELEMEDICINA",
+        documentos: [
+          { nome: "Seguro Belz (SulAmérica)", arquivo: "/arquivos/segurodevida-sulamerica-belz.pdf" }
+        ]
+      }
+    },
+    
+    empresarial: {
+      atual: {
+        seguradora: "Porto Seguro",
+        valorAnual: 102743.55,
+        valorMensal: 102743.55 / 12,
+        documentos: [
+          { nome: "Seguro Empresarial Atual", arquivo: "/arquivos/seguroempresarial-atual.pdf" }
+        ]
+      },
+      proposta: {
+        seguradora: "Mapfre",
+        valorAnual: 77688.09,
+        valorMensal: 77688.09 / 12,
+        documentos: []
+      }
+    },
+    
+    frota: {
+      atual: {
+        veiculos: 37,
+        seguradora: "Bradesco",
+        valorAnual: 260049.96,
+        valorMensal: 260049.96 / 12,
+        documentos: [
+          { nome: "Seguro Atual", arquivo: "/arquivos/segurofrota-atual.pdf" }
+        ]
+      },
+      proposta: {
+        veiculos: 37,
+        tokio: {
+          valor: 15800.03,
+          valorMensal: 15800.03 / 12
+        },
+        allianz: {
+          valor: 206507.71,
+          valorMensal: 206507.71 / 12
+        },
+        totalAnual: 222307.74,
+        totalMensal: 222307.74 / 12,
+        documentos: [
+          { nome: "Proposta Tokio (Belz)", arquivo: "/arquivos/segurofrota-tokio-belz.pdf" },
+          { nome: "Proposta Allianz (Belz)", arquivo: "/arquivos/segurofrota-allianz-belz.pdf" }
+        ]
+      }
+    }
+  },
+
+  // Custos adicionais
+  custosAdicionais: {
+    ouvidoria: 1300.00,
+    ginasticaLaboral: 2500.00,
+    belzConectaSaude: 15000.00
   },
 
   // Dados Financeiros e Cálculos

@@ -14,7 +14,7 @@ const PDFLink: React.FC<PDFLinkProps> = ({ file, label, variant = 'default' }) =
       case 'belz':
         return 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300';
       default:
-        return 'bg-white border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300';
+        return 'bg-white border-gray-200 text-gray-900 hover:bg-gray-50 hover:border-gray-300';
     }
   };
 

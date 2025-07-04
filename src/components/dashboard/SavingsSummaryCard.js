@@ -70,7 +70,7 @@ const SavingsSummaryCard = () => {
         </Card>
       </div>
       
-      <p className="text-center text-gray-600 italic text-sm md:text-base">
+      <p className="text-center text-gray-800 italic text-sm md:text-base">
         {companyData.labels.sections.savings.description}
       </p>
       

@@ -30,10 +30,10 @@ const ComparisonTable = () => {
             <div className="p-3 md:p-4 font-medium text-gray-800">
               {service.service}
             </div>
-            <div className="p-3 md:p-4 text-gray-700">
+            <div className="p-3 md:p-4 text-gray-900">
               {formatCurrency(service.current)}
             </div>
-            <div className="p-3 md:p-4 text-gray-700">
+            <div className="p-3 md:p-4 text-gray-900">
               {formatCurrency(service.proposal)}
             </div>
             <div className={`p-3 md:p-4 font-bold ${
