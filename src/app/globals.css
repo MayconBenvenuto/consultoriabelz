@@ -1,15 +1,71 @@
 @import "tailwindcss";
 
+/* Paleta de cores personalizada */
 :root {
+  --primary: #021d79;        /* Azul principal */
+  --primary-dark: #011147;   /* Azul escuro */
+  --background-light: #f6f6f6; /* Fundo claro */
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Estilos customizados para a nova paleta */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-primary-dark {
+  color: var(--primary-dark) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.bg-primary-dark {
+  background-color: var(--primary-dark) !important;
+}
+
+.bg-background-light {
+  background-color: var(--background-light) !important;
+}
+
+.border-primary {
+  border-color: var(--primary) !important;
+}
+
+.border-primary-dark {
+  border-color: var(--primary-dark) !important;
+}
+
+/* Gradientes personalizados */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+}
+
+.bg-gradient-primary-reverse {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%) !important;
+}
+
+/* Classes para opacidade */
+.bg-primary\/5 {
+  background-color: rgb(2 29 121 / 0.05) !important;
+}
+
+.bg-primary\/10 {
+  background-color: rgb(2 29 121 / 0.1) !important;
+}
+
+.bg-primary\/20 {
+  background-color: rgb(2 29 121 / 0.2) !important;
+}
+
+.border-primary\/20 {
+  border-color: rgb(2 29 121 / 0.2) !important;
+}
+
+.border-primary\/30 {
+  border-color: rgb(2 29 121 / 0.3) !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +79,81 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Força a aplicação das cores personalizadas apenas quando não há estilo inline */
+h1:not([style*="color"]), h2:not([style*="color"]), h3:not([style*="color"]), h4:not([style*="color"]), h5:not([style*="color"]), h6:not([style*="color"]) {
+  color: var(--primary-dark);
+}
+
+/* Garantir que textos em fundos azuis sejam sempre brancos */
+.bg-\[\#021d79\] h1, .bg-\[\#021d79\] h2, .bg-\[\#021d79\] h3, .bg-\[\#021d79\] h4, .bg-\[\#021d79\] h5, .bg-\[\#021d79\] h6,
+.bg-\[\#011147\] h1, .bg-\[\#011147\] h2, .bg-\[\#011147\] h3, .bg-\[\#011147\] h4, .bg-\[\#011147\] h5, .bg-\[\#011147\] h6 {
+  color: white !important;
+}
+
+/* Regras forçadas para títulos em fundo azul escuro */
+.bg-\[\#021d79\] h3, 
+.bg-\[\#011147\] h3,
+[class*="bg-[#021d79]"] h3,
+[class*="bg-[#011147]"] h3 {
+  color: white !important;
+}
+
+/* Forçar elementos dentro de título a ficarem brancos */
+h3[class*="text-[#f6f6f6]"],
+h3[class*="text-[#ffffff]"] {
+  color: white !important;
+}
+
+h3[class*="text-[#f6f6f6]"] *, 
+h3[class*="text-[#ffffff]"] * {
+  color: white !important;
+}
+
+/* Forçar todos os spans dentro de h3 em fundo azul a ficarem brancos */
+.bg-\[\#021d79\] h3 span, 
+.bg-\[\#011147\] h3 span {
+  color: white !important;
+}
+
+/* Ajuste para garantir que a classe .titulo-branco tenha precedência máxima */
+.titulo-branco, .titulo-branco *, h3 strong {
+  color: #ffffff !important;
+}
+
+/* Regra específica para "Proposta Belz" */
+h3:has(+ div p) {
+  color: white !important;
+}
+
+/* Força títulos brancos mesmo com outras classes */
+h1[style*="ffffff"], h2[style*="ffffff"], h3[style*="ffffff"] {
+  color: #ffffff !important;
+}
+
+.section-header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
+}
+
+.card-primary {
+  background-color: rgb(2 29 121 / 0.05) !important;
+  border: 1px solid rgb(2 29 121 / 0.2) !important;
+}
+
+.text-primary-emphasis {
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+
+.text-primary-dark-emphasis {
+  color: var(--primary-dark) !important;
+  font-weight: 700;
+}
+
+/* Regras específicas para os IDs de Proposta Belz */
+#proposta-belz-1, #proposta-belz-2, #proposta-belz-3,
+#proposta-belz-1 *, #proposta-belz-2 *, #proposta-belz-3 * {
+  color: white !important;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
